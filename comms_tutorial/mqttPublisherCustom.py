@@ -44,7 +44,7 @@ client.loop_start()
 # payload must be a string, bytearray, int, float or None.
 while True:
     for i in range(10):
-        client.publish('ece180d/test', "https://www.youtube.com/watch?v=oHg5SJYRHA0", qos=1)
+        client.publish('ece180d/team8', '{"messages": [{"message_type": "text", "data": "some text", "sender": "John", "reciever": "Jack", "time": {"hour": 1, "minute": 14, "second": 39}}, {"message_type": "weather", "data": {"conditions": "sunny", "temp": 69, "high": 75, "low": 50}}, {"message_type": "news", "data": "https://www.youtube.com/watch?v=oHg5SJYRHA0", "relevant_text": "important information"}]}', qos=1)
     time.sleep(10)
 
 # 6. use disconnect() to disconnect from the broker.
